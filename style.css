@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+/* ── RESET ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream:    #faf7f2;
+  --beige:    #f0ebe0;
+  --beige2:   #e8e0d0;
+  --lavender: #e8e4f0;
+  --violet:   #c5bce0;
+  --violet2:  #9b8fc4;
+  --blue:     #b8cce0;
+  --blue3:    #4a7fa0;
+  --text:     #2a2535;
+  --text2:    #5a5268;
+  --text3:    #8a8298;
+  --border:   rgba(155,143,196,0.2);
+  --shadow:   rgba(90,82,104,0.1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.7;
+}
+
+/* nav */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 5vw;
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 500;
+  color: var(--text); text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.nav-links { display: flex; list-style: none; }
+
+.nav-links a {
+  display: block;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.8rem; font-weight: 400;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text2); text-decoration: none;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+.nav-links a:hover { color: var(--text); background: var(--lavender); }
+.nav-links a.active { color: var(--violet2); background: rgba(197,188,224,0.25); font-weight: 500; }
+
+.page { padding-top: 72px; min-height: 100vh; }
+
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 5vw;
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--beige);
+}
+footer p { font-size: 0.8rem; color: var(--text3); font-weight: 300; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--text2); }
+
+/*bouton*/
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0.7rem 1.6rem; border-radius: 100px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; border: none;
+  transition: all 0.2s;
+}
+.btn-primary { background: var(--violet2); color: #fff; }
+.btn-primary:hover { background: #7a6fb0; }
+.btn-outline { background: transparent; color: var(--text2); border: 1px solid var(--border); }
+.btn-outline:hover { border-color: var(--violet); color: var(--text); background: var(--lavender); }
+
+
+.label {
+  display: inline-block;
+  font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--violet2); margin-bottom: 0.6rem;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400; line-height: 1.05; color: var(--text);
+}
+h1 em { font-style: italic; color: var(--violet2); }
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400; line-height: 1.15; color: var(--text);
+  margin-bottom: 1rem;
+}
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 500;
+  color: var(--text); margin-bottom: 0.6rem;
+}
+p { color: var(--text2); font-size: 0.95rem; line-height: 1.85; font-weight: 300; }
+
+
+
+.tag {
+  display: inline-block; padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.tag-violet { background: rgba(197,188,224,0.35); color: var(--violet2); }
+.tag-blue   { background: rgba(184,204,224,0.35); color: var(--blue3); }
+.tag-beige  { background: var(--beige2); color: var(--text3); }
+
+
+.soft-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 4rem 0;
+}
+
+/*ANIMATIONS*/
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up   { animation: fadeUp 0.6s ease both; }
+.fade-up-1 { animation-delay: 0.1s; }
+.fade-up-2 { animation-delay: 0.22s; }
+.fade-up-3 { animation-delay: 0.34s; }
+.fade-up-4 { animation-delay: 0.46s; }
+
+@media (max-width: 768px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links a { padding: 0.5rem 0.7rem; font-size: 0.75rem; }
+}
