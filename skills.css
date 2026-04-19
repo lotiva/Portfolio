@@ -1,0 +1,147 @@
+.skills-page { 
+  padding: 5rem 5vw; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.skills-page .page-header p {
+   max-width: 480px; 
+   margin-top: 0.8rem; 
+   font-size: 0.97rem; 
+  }
+
+
+.skills-main {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem; 
+  margin-bottom: 4rem;
+}
+
+.skill-card {
+  background: #fff; 
+  border: 1px solid var(--border);
+  border-radius: 16px; 
+  padding: 1.7rem;
+  transition: box-shadow 0.2s;
+}
+
+.skill-card:hover { 
+  box-shadow: 0 5px 20px var(--shadow); 
+}
+
+.skill-card-header {
+  margin-bottom: 1.2rem; 
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-card-header h3 { 
+  font-size: 1.15rem; 
+  font-weight: 500; 
+  margin: 0; 
+}
+
+.skill-list { 
+  list-style: none; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.45rem; 
+}
+
+.skill-list li { 
+  font-size: 0.86rem; 
+  color: var(--text2); 
+  font-weight: 300; 
+}
+
+.learning-section { 
+  margin-bottom: 4rem; 
+}
+
+.learning-grid {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; 
+  margin-top: 2rem;
+}
+
+.learning-item {
+  background: var(--lavender); 
+  border-radius: 12px;
+  padding: 1.2rem 1rem; 
+  text-align: center;
+  border: 1px solid rgba(197,188,224,0.3);
+  transition: box-shadow 0.2s;
+}
+
+.learning-item:hover { 
+  box-shadow: 0 3px 10px var(--shadow); 
+}
+
+.learning-item h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.98rem; 
+  font-weight: 500; 
+  color: var(--text); 
+  margin-bottom: 0.2rem;
+}
+
+.learning-item p { 
+  font-size: 0.77rem; 
+  line-height: 1.5; 
+  margin: 0; 
+  color: var(--text3); 
+}
+
+
+.languages-section { 
+  margin-bottom: 4rem; 
+}
+
+.lang-grid {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.lang-card {
+  background: #fff; 
+  border: 1px solid var(--border);
+  border-radius: 12px; 
+  padding: 1.4rem;
+}
+
+.lang-info h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; 
+  font-weight: 500; 
+  color: var(--text); 
+  margin-bottom: 0.15rem;
+}
+
+.lang-info p { 
+  font-size: 0.81rem; 
+  margin: 0; 
+  color: var(--text3); 
+}
+
+@media (max-width: 1000px) {
+  .skills-main   { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .learning-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+@media (max-width: 640px) {
+  .skills-main { 
+    grid-template-columns: 1fr; 
+  }
+
+  .lang-grid   { 
+    grid-template-columns: 1fr; 
+  }
+}
