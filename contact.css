@@ -1,6 +1,5 @@
 
 /*CONTACT.HTML */
-
 .contact-page { padding: 5rem 5vw; max-width: 1200px; margin: 0 auto; }
 
 .contact-layout {
@@ -16,8 +15,10 @@
 .contact-item {
   display: flex; align-items: center; gap: 1rem;
   padding: 0.95rem 1.1rem;
-  background: #fff; border: 1px solid var(--border);
+  background: linear-gradient(120deg, var(--lavender) 80%, var(--beige2) 100%) !important;
+  border: 2px solid var(--violet2) !important;
   border-radius: 11px; text-decoration: none; color: var(--text);
+  box-shadow: 0 2px 16px var(--shadow) !important;
   transition: all 0.2s;
 }
 .contact-item:hover { border-color: var(--violet); box-shadow: 0 3px 12px var(--shadow); }
@@ -38,8 +39,10 @@
 .contact-item:hover .contact-item-arrow { opacity: 1; }
 
 .contact-form {
-  background: #fff; border: 1px solid var(--border);
+  background: linear-gradient(120deg, var(--lavender) 80%, var(--beige2) 100%) !important;
+  border: 2px solid var(--violet2) !important;
   border-radius: 18px; padding: 2rem;
+  box-shadow: 0 2px 16px var(--shadow) !important;
 }
 .contact-form h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
 .form-subtitle   { font-size: 0.84rem; color: var(--text3); margin-bottom: 1.7rem; }
