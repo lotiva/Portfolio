@@ -141,6 +141,7 @@ h1 em {
 /* défilement */
 .scroll-hint {
   display: inline-flex;
+  width: fit-content;
   margin: 0 5vw 3rem;
   text-decoration: none;
 }
