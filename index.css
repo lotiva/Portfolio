@@ -140,22 +140,13 @@ h1 em {
 
 /* défilement */
 .scroll-hint {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 0.72rem;
-  color: var(--text3);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0 5vw 3rem;
+  display: inline-flex;
+  margin: 0 5vw 3rem;
+  text-decoration: none;
 }
 
 .scroll-hint::before {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: var(--beige2);
+  display: none;
 }
 
 /* responsive */
