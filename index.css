@@ -140,25 +140,7 @@ h1 em {
 
 /* défilement */
 .scroll-hint {
-  display: inline-flex;
-  width: fit-content;
-  align-items: center;
-  margin: 0 5vw 3rem;
-  padding: 0.65rem 1.5rem;
-  border: 1.5px solid var(--border);
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text2);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.scroll-hint:hover {
-  background: var(--lavender);
-  color: var(--text);
+  margin-top: 1.5rem;
 }
 
 .scroll-hint::before {
@@ -190,10 +172,5 @@ h1 em {
     width: 270px;
     height: 270px;
     top: 0;
-  }
-  .scroll-hint {
-    margin: 0 auto 3rem;
-    display: flex;
-    justify-content: center;
   }
 }
